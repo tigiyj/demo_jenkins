@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker 'php' }
+    agent { 
+        docker {
+            image 'php:7-alpine'
+        } 
+    }
     stages {
         stage('build') {
             steps {
